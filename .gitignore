@@ -1,2 +1,4 @@
 .claude/
 images/
+dist/
+node_modules/

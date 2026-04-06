@@ -1,0 +1,9 @@
+{
+  "name": "valerian-peptide",
+  "version": "1.0.0",
+  "description": "Valerian Peptide — Premium Research Peptides",
+  "scripts": {
+    "build": "node build.js",
+    "start": "npx serve dist"
+  }
+}
