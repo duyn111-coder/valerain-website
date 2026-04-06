@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valerian Peptide — Premium Research Peptides</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ───────── ANNOUNCEMENT BAR ───────── -->
+  <div class="announce-bar">
+    <p>Free shipping on orders over $150 &nbsp;|&nbsp; Same-day dispatch before 2 PM EST</p>
+  </div>
+
+  <!-- ───────── HEADER ───────── -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <div class="nav-left">
+        <div class="nav-dropdown">
+          <button class="nav-link">Shop <svg class="chevron" viewBox="0 0 12 12"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></button>
+          <div class="dropdown">
+            <a href="#products">
+              <span class="dd-icon">🔬</span>
+              <span><strong>All Products</strong><small>Browse our full catalog</small></span>
+            </a>
+            <a href="#products">
+              <span class="dd-icon">⚖️</span>
+              <span><strong>Weight Loss</strong><small>GLP-1 agonists &amp; metabolics</small></span>
+            </a>
+            <a href="#products">
+              <span class="dd-icon">💪</span>
+              <span><strong>Muscle Growth</strong><small>Growth factors &amp; SARMs</small></span>
+            </a>
+            <a href="#products">
+              <span class="dd-icon">🩹</span>
+              <span><strong>Recovery</strong><small>Healing &amp; repair peptides</small></span>
+            </a>
+            <a href="#products">
+              <span class="dd-icon">✨</span>
+              <span><strong>Anti-Aging</strong><small>Longevity &amp; skin health</small></span>
+            </a>
+          </div>
+        </div>
+        <a href="#reviews" class="nav-link">Reviews</a>
+        <div class="nav-dropdown">
+          <button class="nav-link">Support <svg class="chevron" viewBox="0 0 12 12"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></button>
+          <div class="dropdown dropdown-sm">
+            <a href="#">FAQ</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Dosage Calculator</a>
+            <a href="#">COA Library</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- LOGO -->
+      <a href="#" class="nav-logo">
+        <svg class="logo-svg" viewBox="0 0 52 52" fill="none">
+          <defs>
+            <linearGradient id="logoGrad" x1="0" y1="0" x2="0" y2="52">
+              <stop offset="0%" stop-color="#00D4FF"/>
+              <stop offset="100%" stop-color="#0052CC"/>
+            </linearGradient>
+          </defs>
+          <!-- Left vertical line (offset, extends above/below square) -->
+          <line x1="5" y1="3" x2="5" y2="49" stroke="url(#logoGrad)" stroke-width="2.5" stroke-linecap="square"/>
+          <!-- Three-sided rectangle: top → right → bottom (open left) -->
+          <polyline points="11,7 45,7 45,45 11,45" stroke="url(#logoGrad)" stroke-width="2.5" fill="none" stroke-linecap="square" stroke-linejoin="miter"/>
+          <!-- V letter -->
+          <text x="16" y="36" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="url(#logoGrad)">V</text>
+        </svg>
+        <span class="logo-wordmark"><strong>Valerian</strong> Peptide</span>
+      </a>
+
+      <!-- RIGHT ICONS -->
+      <div class="nav-right">
+        <button class="nav-icon" aria-label="Search" id="searchToggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <a href="#" class="nav-icon" aria-label="Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <button class="nav-icon cart-icon" aria-label="Cart" id="cartToggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+        <button class="hamburger" id="menuToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- SEARCH OVERLAY -->
+    <div class="search-bar" id="searchBar">
+      <div class="container">
+        <input type="text" placeholder="Search peptides, categories…" autofocus>
+        <button class="close-search" id="closeSearch">&times;</button>
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#products">Shop All</a>
+      <a href="#products">Weight Loss</a>
+      <a href="#products">Muscle Growth</a>
+      <a href="#products">Recovery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#">FAQ</a>
+      <a href="#">Contact</a>
+    </div>
+  </header>
+
+  <!-- ───────── HERO ───────── -->
+  <section class="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-inner container">
+      <div class="hero-text">
+        <span class="hero-badge reveal">Research Grade Peptides</span>
+        <h1 class="reveal">Peptide<br><em>Innovation</em><br>Begins Here</h1>
+        <p class="hero-sub reveal">Premium quality peptides backed by third-party lab analysis, 99%+ purity guaranteed, and trusted by researchers worldwide.</p>
+        <div class="hero-actions reveal">
+          <a href="#products" class="btn btn-primary">Shop Now</a>
+          <a href="#why" class="btn btn-outline">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="hero-vial-display">
+          <div class="glow-ring"></div>
+          <div class="vial-3d">
+            <div class="vial-cap"></div>
+            <div class="vial-neck"></div>
+            <div class="vial-body">
+              <div class="vial-label">
+                <svg viewBox="0 0 36 36" fill="none"><defs><linearGradient id="vialGrad" x1="0" y1="0" x2="0" y2="36"><stop offset="0%" stop-color="rgba(0,212,255,0.6)"/><stop offset="100%" stop-color="rgba(0,82,204,0.6)"/></linearGradient></defs><line x1="4" y1="2" x2="4" y2="34" stroke="url(#vialGrad)" stroke-width="1.5"/><polyline points="8,5 30,5 30,31 8,31" stroke="url(#vialGrad)" stroke-width="1.5" fill="none" stroke-linejoin="miter"/><text x="11" y="24" font-family="Georgia" font-size="14" font-weight="bold" fill="url(#vialGrad)">V</text></svg>
+                <span>Valerian<br>Peptide</span>
+              </div>
+              <div class="vial-liquid"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATEGORY PILLS -->
+    <div class="hero-cats container reveal">
+      <a href="#products" class="cat-pill" data-filter="weight-loss">
+        <span class="cat-name">Weight Loss</span>
+        <span class="cat-arrow"><svg viewBox="0 0 20 20" fill="none"><path d="M5 10h10m-4-4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a href="#products" class="cat-pill" data-filter="muscle">
+        <span class="cat-name">Muscle Growth</span>
+        <span class="cat-arrow"><svg viewBox="0 0 20 20" fill="none"><path d="M5 10h10m-4-4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a href="#products" class="cat-pill" data-filter="recovery">
+        <span class="cat-name">Recovery</span>
+        <span class="cat-arrow"><svg viewBox="0 0 20 20" fill="none"><path d="M5 10h10m-4-4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ───────── STATS BAR ───────── -->
+  <section class="stats-bar">
+    <div class="container stats-grid">
+      <div class="stat">
+        <span class="stat-num" data-target="99">0</span><span class="stat-suffix">%+</span>
+        <span class="stat-label">Purity Verified</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-target="15000">0</span><span class="stat-suffix">+</span>
+        <span class="stat-label">Orders Shipped</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-target="48">0</span><span class="stat-suffix">h</span>
+        <span class="stat-label">Avg. Delivery</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-target="4">0</span><span class="stat-suffix">.9★</span>
+        <span class="stat-label">Customer Rating</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── PRODUCTS ───────── -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-top">
+        <div>
+          <span class="section-tag reveal">Our Products</span>
+          <h2 class="section-title reveal">Featured Peptides</h2>
+        </div>
+        <a href="#" class="view-all reveal">View All Products →</a>
+      </div>
+
+      <!-- FILTER TABS -->
+      <div class="filter-tabs reveal">
+        <button class="tab active" data-filter="all">All</button>
+        <button class="tab" data-filter="weight-loss">Weight Loss</button>
+        <button class="tab" data-filter="muscle">Muscle Growth</button>
+        <button class="tab" data-filter="recovery">Recovery</button>
+        <button class="tab" data-filter="anti-aging">Anti-Aging</button>
+      </div>
+
+      <div class="product-grid">
+
+        <div class="p-card reveal" data-category="weight-loss">
+          <div class="p-card-img">
+            <span class="p-badge p-badge-blue">Weight Loss</span>
+            <div class="p-vial">
+              <div class="pv-cap"></div>
+              <div class="pv-crimp"></div>
+              <div class="pv-neck"></div>
+              <div class="pv-body">
+                <div class="pv-label">
+                  <div class="pv-label-logo"><svg viewBox="0 0 52 52" fill="none"><defs><linearGradient id="lbl1" x1="0" y1="0" x2="0" y2="52"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0052CC"/></linearGradient></defs><line x1="5" y1="3" x2="5" y2="49" stroke="url(#lbl1)" stroke-width="3"/><polyline points="11,7 45,7 45,45 11,45" stroke="url(#lbl1)" stroke-width="3" fill="none" stroke-linejoin="miter"/><text x="16" y="36" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="url(#lbl1)">V</text></svg><span class="pv-label-brand">Valerian<br>Peptide</span></div>
+                  <div class="pv-label-name"><span class="pv-label-stripe" style="background:#0052CC"></span><span class="pv-label-title">SEMA-<br>GLUTIDE</span></div>
+                  <span class="pv-label-dose">5MG</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-card-body">
+            <span class="p-sku">VP-001</span>
+            <h3>Semaglutide</h3>
+            <p>GLP-1 receptor agonist for appetite regulation and metabolic health.</p>
+            <div class="p-meta"><span class="p-dose">5mg / vial</span><span class="p-purity">Purity: 99.2%</span></div>
+            <div class="p-bottom">
+              <span class="p-price">$89<small>.99</small></span>
+              <button class="cart-add">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-card reveal" data-category="muscle">
+          <div class="p-card-img">
+            <span class="p-badge p-badge-teal">Muscle Growth</span>
+            <div class="p-vial">
+              <div class="pv-cap"></div>
+              <div class="pv-crimp"></div>
+              <div class="pv-neck"></div>
+              <div class="pv-body">
+                <div class="pv-label">
+                  <div class="pv-label-logo"><svg viewBox="0 0 52 52" fill="none"><defs><linearGradient id="lbl2" x1="0" y1="0" x2="0" y2="52"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0052CC"/></linearGradient></defs><line x1="5" y1="3" x2="5" y2="49" stroke="url(#lbl2)" stroke-width="3"/><polyline points="11,7 45,7 45,45 11,45" stroke="url(#lbl2)" stroke-width="3" fill="none" stroke-linejoin="miter"/><text x="16" y="36" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="url(#lbl2)">V</text></svg><span class="pv-label-brand">Valerian<br>Peptide</span></div>
+                  <div class="pv-label-name"><span class="pv-label-stripe" style="background:#0f766e"></span><span class="pv-label-title">BPC-157</span></div>
+                  <span class="pv-label-dose">5MG</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-card-body">
+            <span class="p-sku">VP-002</span>
+            <h3>BPC-157</h3>
+            <p>Body protection compound for tissue repair and muscle recovery.</p>
+            <div class="p-meta"><span class="p-dose">5mg / vial</span><span class="p-purity">Purity: 99.4%</span></div>
+            <div class="p-bottom">
+              <span class="p-price">$64<small>.99</small></span>
+              <button class="cart-add">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-card reveal" data-category="recovery">
+          <div class="p-card-img">
+            <span class="p-badge p-badge-green">Recovery</span>
+            <div class="p-vial">
+              <div class="pv-cap"></div>
+              <div class="pv-crimp"></div>
+              <div class="pv-neck"></div>
+              <div class="pv-body">
+                <div class="pv-label">
+                  <div class="pv-label-logo"><svg viewBox="0 0 52 52" fill="none"><defs><linearGradient id="lbl3" x1="0" y1="0" x2="0" y2="52"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0052CC"/></linearGradient></defs><line x1="5" y1="3" x2="5" y2="49" stroke="url(#lbl3)" stroke-width="3"/><polyline points="11,7 45,7 45,45 11,45" stroke="url(#lbl3)" stroke-width="3" fill="none" stroke-linejoin="miter"/><text x="16" y="36" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="url(#lbl3)">V</text></svg><span class="pv-label-brand">Valerian<br>Peptide</span></div>
+                  <div class="pv-label-name"><span class="pv-label-stripe" style="background:#15803d"></span><span class="pv-label-title">TB-500</span></div>
+                  <span class="pv-label-dose">5MG</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-card-body">
+            <span class="p-sku">VP-003</span>
+            <h3>TB-500</h3>
+            <p>Thymosin Beta-4 for accelerated healing and inflammation reduction.</p>
+            <div class="p-meta"><span class="p-dose">5mg / vial</span><span class="p-purity">Purity: 99.1%</span></div>
+            <div class="p-bottom">
+              <span class="p-price">$74<small>.99</small></span>
+              <button class="cart-add">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-card reveal" data-category="anti-aging">
+          <div class="p-card-img">
+            <span class="p-badge p-badge-purple">Anti-Aging</span>
+            <div class="p-vial">
+              <div class="pv-cap"></div>
+              <div class="pv-crimp"></div>
+              <div class="pv-neck"></div>
+              <div class="pv-body">
+                <div class="pv-label">
+                  <div class="pv-label-logo"><svg viewBox="0 0 52 52" fill="none"><defs><linearGradient id="lbl4" x1="0" y1="0" x2="0" y2="52"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0052CC"/></linearGradient></defs><line x1="5" y1="3" x2="5" y2="49" stroke="url(#lbl4)" stroke-width="3"/><polyline points="11,7 45,7 45,45 11,45" stroke="url(#lbl4)" stroke-width="3" fill="none" stroke-linejoin="miter"/><text x="16" y="36" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="url(#lbl4)">V</text></svg><span class="pv-label-brand">Valerian<br>Peptide</span></div>
+                  <div class="pv-label-name"><span class="pv-label-stripe" style="background:#7e22ce"></span><span class="pv-label-title">EPITHALON</span></div>
+                  <span class="pv-label-dose">10MG</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-card-body">
+            <span class="p-sku">VP-004</span>
+            <h3>Epithalon</h3>
+            <p>Tetrapeptide for telomere extension and cellular longevity support.</p>
+            <div class="p-meta"><span class="p-dose">10mg / vial</span><span class="p-purity">Purity: 99.5%</span></div>
+            <div class="p-bottom">
+              <span class="p-price">$79<small>.99</small></span>
+              <button class="cart-add">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-card reveal" data-category="weight-loss">
+          <div class="p-card-img">
+            <span class="p-badge p-badge-blue">Weight Loss</span>
+            <div class="p-vial">
+              <div class="pv-cap"></div>
+              <div class="pv-crimp"></div>
+              <div class="pv-neck"></div>
+              <div class="pv-body">
+                <div class="pv-label">
+                  <div class="pv-label-logo"><svg viewBox="0 0 52 52" fill="none"><defs><linearGradient id="lbl5" x1="0" y1="0" x2="0" y2="52"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0052CC"/></linearGradient></defs><line x1="5" y1="3" x2="5" y2="49" stroke="url(#lbl5)" stroke-width="3"/><polyline points="11,7 45,7 45,45 11,45" stroke="url(#lbl5)" stroke-width="3" fill="none" stroke-linejoin="miter"/><text x="16" y="36" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="url(#lbl5)">V</text></svg><span class="pv-label-brand">Valerian<br>Peptide</span></div>
+                  <div class="pv-label-name"><span class="pv-label-stripe" style="background:#c0392b"></span><span class="pv-label-title">TIRZE-<br>PATIDE</span></div>
+                  <span class="pv-label-dose">5MG</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-card-body">
+            <span class="p-sku">VP-005</span>
+            <h3>Tirzepatide</h3>
+            <p>Dual GIP/GLP-1 agonist for advanced metabolic and weight management.</p>
+            <div class="p-meta"><span class="p-dose">5mg / vial</span><span class="p-purity">Purity: 99.3%</span></div>
+            <div class="p-bottom">
+              <span class="p-price">$109<small>.99</small></span>
+              <button class="cart-add">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-card reveal" data-category="muscle">
+          <div class="p-card-img">
+            <span class="p-badge p-badge-teal">Muscle Growth</span>
+            <div class="p-vial">
+              <div class="pv-cap"></div>
+              <div class="pv-crimp"></div>
+              <div class="pv-neck"></div>
+              <div class="pv-body">
+                <div class="pv-label">
+                  <div class="pv-label-logo"><svg viewBox="0 0 52 52" fill="none"><defs><linearGradient id="lbl6" x1="0" y1="0" x2="0" y2="52"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0052CC"/></linearGradient></defs><line x1="5" y1="3" x2="5" y2="49" stroke="url(#lbl6)" stroke-width="3"/><polyline points="11,7 45,7 45,45 11,45" stroke="url(#lbl6)" stroke-width="3" fill="none" stroke-linejoin="miter"/><text x="16" y="36" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="url(#lbl6)">V</text></svg><span class="pv-label-brand">Valerian<br>Peptide</span></div>
+                  <div class="pv-label-name"><span class="pv-label-stripe" style="background:#e67e22"></span><span class="pv-label-title">IGF-1<br>LR3</span></div>
+                  <span class="pv-label-dose">1MG</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-card-body">
+            <span class="p-sku">VP-006</span>
+            <h3>IGF-1 LR3</h3>
+            <p>Insulin-like growth factor for enhanced muscle protein synthesis.</p>
+            <div class="p-meta"><span class="p-dose">1mg / vial</span><span class="p-purity">Purity: 99.0%</span></div>
+            <div class="p-bottom">
+              <span class="p-price">$99<small>.99</small></span>
+              <button class="cart-add">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-card reveal" data-category="recovery">
+          <div class="p-card-img">
+            <span class="p-badge p-badge-green">Recovery</span>
+            <div class="p-vial">
+              <div class="pv-cap"></div>
+              <div class="pv-crimp"></div>
+              <div class="pv-neck"></div>
+              <div class="pv-body">
+                <div class="pv-label">
+                  <div class="pv-label-logo"><svg viewBox="0 0 52 52" fill="none"><defs><linearGradient id="lbl7" x1="0" y1="0" x2="0" y2="52"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0052CC"/></linearGradient></defs><line x1="5" y1="3" x2="5" y2="49" stroke="url(#lbl7)" stroke-width="3"/><polyline points="11,7 45,7 45,45 11,45" stroke="url(#lbl7)" stroke-width="3" fill="none" stroke-linejoin="miter"/><text x="16" y="36" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="url(#lbl7)">V</text></svg><span class="pv-label-brand">Valerian<br>Peptide</span></div>
+                  <div class="pv-label-name"><span class="pv-label-stripe" style="background:#16a085"></span><span class="pv-label-title">GHK-CU</span></div>
+                  <span class="pv-label-dose">50MG</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-card-body">
+            <span class="p-sku">VP-007</span>
+            <h3>GHK-Cu</h3>
+            <p>Copper peptide for collagen synthesis, skin repair, and wound healing.</p>
+            <div class="p-meta"><span class="p-dose">50mg / vial</span><span class="p-purity">Purity: 99.6%</span></div>
+            <div class="p-bottom">
+              <span class="p-price">$54<small>.99</small></span>
+              <button class="cart-add">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-card reveal" data-category="anti-aging">
+          <div class="p-card-img">
+            <span class="p-badge p-badge-purple">Anti-Aging</span>
+            <div class="p-vial">
+              <div class="pv-cap"></div>
+              <div class="pv-crimp"></div>
+              <div class="pv-neck"></div>
+              <div class="pv-body">
+                <div class="pv-label">
+                  <div class="pv-label-logo"><svg viewBox="0 0 52 52" fill="none"><defs><linearGradient id="lbl8" x1="0" y1="0" x2="0" y2="52"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0052CC"/></linearGradient></defs><line x1="5" y1="3" x2="5" y2="49" stroke="url(#lbl8)" stroke-width="3"/><polyline points="11,7 45,7 45,45 11,45" stroke="url(#lbl8)" stroke-width="3" fill="none" stroke-linejoin="miter"/><text x="16" y="36" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="url(#lbl8)">V</text></svg><span class="pv-label-brand">Valerian<br>Peptide</span></div>
+                  <div class="pv-label-name"><span class="pv-label-stripe" style="background:#2980b9"></span><span class="pv-label-title">PT-141</span></div>
+                  <span class="pv-label-dose">10MG</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-card-body">
+            <span class="p-sku">VP-008</span>
+            <h3>PT-141</h3>
+            <p>Melanocortin receptor agonist for vitality and hormonal support.</p>
+            <div class="p-meta"><span class="p-dose">10mg / vial</span><span class="p-purity">Purity: 99.2%</span></div>
+            <div class="p-bottom">
+              <span class="p-price">$69<small>.99</small></span>
+              <button class="cart-add">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── WHY VALERIAN ───────── -->
+  <section class="why" id="why">
+    <div class="container">
+      <div class="section-top center">
+        <span class="section-tag reveal">Why Choose Us</span>
+        <h2 class="section-title reveal">The Valerian Standard</h2>
+        <p class="section-desc reveal">Every product we ship meets the highest standards in the industry.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="why-num">01</div>
+          <div class="why-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg></div>
+          <h3>Third-Party Lab Tested</h3>
+          <p>Every batch comes with a Certificate of Analysis from independent ISO-accredited laboratories.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-num">02</div>
+          <div class="why-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>99%+ Purity Guarantee</h3>
+          <p>Pharmaceutical-grade synthesis with HPLC and mass spectrometry verification on every product.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-num">03</div>
+          <div class="why-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <h3>Same-Day Processing</h3>
+          <p>Orders placed before 2 PM EST ship the same day. Fully tracked and discreetly packaged.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-num">04</div>
+          <div class="why-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h3>Dedicated Support</h3>
+          <p>Our team of biochemistry experts is available via live chat, email, or phone 7 days a week.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── PROCESS ───────── -->
+  <section class="process">
+    <div class="container">
+      <div class="section-top center">
+        <span class="section-tag reveal">How It Works</span>
+        <h2 class="section-title reveal">From Lab to Your Door</h2>
+      </div>
+      <div class="process-steps">
+        <div class="step reveal">
+          <div class="step-circle">1</div>
+          <h3>Choose Your Peptides</h3>
+          <p>Browse our catalog and select the research compounds you need.</p>
+        </div>
+        <div class="step-line"></div>
+        <div class="step reveal">
+          <div class="step-circle">2</div>
+          <h3>Quality Assured</h3>
+          <p>Each vial is pulled from a lab-tested, COA-verified batch.</p>
+        </div>
+        <div class="step-line"></div>
+        <div class="step reveal">
+          <div class="step-circle">3</div>
+          <h3>Fast Delivery</h3>
+          <p>Same-day dispatch, temperature-controlled packaging, tracked shipping.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── REVIEWS ───────── -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="section-top center">
+        <span class="section-tag reveal">Testimonials</span>
+        <h2 class="section-title reveal">Trusted by Researchers</h2>
+      </div>
+      <div class="reviews-slider">
+        <div class="review reveal">
+          <div class="review-stars">★★★★★</div>
+          <blockquote>"Exceptional purity — confirmed by my own HPLC analysis. Valerian Peptide has become my go-to supplier for all research compounds."</blockquote>
+          <div class="review-author">
+            <div class="review-avatar">MC</div>
+            <div><strong>Dr. M. Chen</strong><span>Research Biochemist</span></div>
+          </div>
+        </div>
+        <div class="review reveal">
+          <div class="review-stars">★★★★★</div>
+          <blockquote>"The BPC-157 results in my studies have been remarkable. Shipping was incredibly fast and the packaging was excellent."</blockquote>
+          <div class="review-author">
+            <div class="review-avatar">JR</div>
+            <div><strong>James R.</strong><span>Independent Researcher</span></div>
+          </div>
+        </div>
+        <div class="review reveal">
+          <div class="review-stars">★★★★★</div>
+          <blockquote>"Finally a peptide company that understands the science. Customer support is knowledgeable, responsive, and genuinely helpful."</blockquote>
+          <div class="review-author">
+            <div class="review-avatar">SK</div>
+            <div><strong>Sarah K.</strong><span>Biohacker &amp; Researcher</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── NEWSLETTER CTA ───────── -->
+  <section class="newsletter">
+    <div class="container newsletter-inner">
+      <div class="nl-text">
+        <h2 class="reveal">Stay Ahead of the Science</h2>
+        <p class="reveal">Get exclusive access to new product launches, research updates, and subscriber-only discounts.</p>
+      </div>
+      <form class="nl-form reveal" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed!'; this.querySelector('button').disabled=true;">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ───────── FOOTER ───────── -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-row">
+          <svg class="logo-svg" viewBox="0 0 52 52" fill="none">
+            <defs>
+              <linearGradient id="logoGrad2" x1="0" y1="0" x2="0" y2="52"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0052CC"/></linearGradient>
+            </defs>
+            <line x1="5" y1="3" x2="5" y2="49" stroke="url(#logoGrad2)" stroke-width="2.5" stroke-linecap="square"/>
+            <polyline points="11,7 45,7 45,45 11,45" stroke="url(#logoGrad2)" stroke-width="2.5" fill="none" stroke-linecap="square" stroke-linejoin="miter"/>
+            <text x="16" y="36" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="url(#logoGrad2)">V</text>
+          </svg>
+          <span class="logo-wordmark"><strong>Valerian</strong> Peptide</span>
+        </div>
+        <p>Premium research peptides backed by science, verified by independent labs, and trusted by thousands of researchers worldwide.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <a href="#">All Products</a>
+        <a href="#">Weight Loss</a>
+        <a href="#">Muscle Growth</a>
+        <a href="#">Recovery</a>
+        <a href="#">Anti-Aging</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="#">FAQ</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Dosage Calculator</a>
+        <a href="#">COA Library</a>
+        <a href="#">Shipping Info</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">About Us</a>
+        <a href="#">Lab Partners</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Refund Policy</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p class="disclaimer">For research purposes only. Not intended for human consumption. Must be 18+ to purchase.</p>
+      <p class="copyright">&copy; 2026 Valerian Peptide. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="close-cart" id="closeCart">&times;</button>
+    </div>
+    <div class="cart-body" id="cartBody">
+      <div class="cart-empty">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <p>Your cart is empty</p>
+        <a href="#products" class="btn btn-primary" id="shopLink">Start Shopping</a>
+      </div>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
