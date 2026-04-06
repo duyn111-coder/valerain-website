@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — Valerian Peptide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0c0f1a;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 24px;
+    }
+    .container { max-width: 480px; }
+    .code {
+      font-size: 120px;
+      font-weight: 800;
+      letter-spacing: -4px;
+      background: linear-gradient(135deg, #00D4FF, #0052CC);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+    h1 { font-size: 24px; font-weight: 700; margin-bottom: 12px; }
+    p { font-size: 15px; color: rgba(255,255,255,0.55); line-height: 1.6; margin-bottom: 32px; }
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      background: linear-gradient(135deg, #00D4FF, #0052CC);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      font-family: inherit;
+      border: none;
+      border-radius: 12px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,82,204,0.5); }
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 48px;
+      opacity: 0.7;
+    }
+    .logo svg { width: 36px; height: 36px; }
+    .logo span { font-size: 15px; font-weight: 400; }
+    .logo strong { font-weight: 800; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <svg viewBox="0 0 52 52" fill="none">
+        <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="52"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#0052CC"/></linearGradient></defs>
+        <line x1="5" y1="3" x2="5" y2="49" stroke="url(#g)" stroke-width="2.5"/>
+        <polyline points="11,7 45,7 45,45 11,45" stroke="url(#g)" stroke-width="2.5" fill="none" stroke-linejoin="miter"/>
+        <text x="16" y="36" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="url(#g)">V</text>
+      </svg>
+      <span><strong>Valerian</strong> Peptide</span>
+    </div>
+    <div class="code">404</div>
+    <h1>Page Not Found</h1>
+    <p>The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
+    <a href="/" class="btn">Back to Home</a>
+  </div>
+</body>
+</html>
