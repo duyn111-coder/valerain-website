@@ -116,7 +116,10 @@
 
   <!-- ───────── HERO ───────── -->
   <section class="hero">
-    <canvas id="heroCanvas"></canvas>
+    <video class="hero-video" autoplay loop muted playsinline preload="auto">
+      <source src="videos/hero-bg.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
     <div class="hero-inner container">
       <div class="hero-text">
         <span class="hero-badge reveal">Research Grade Peptides</span>
@@ -125,22 +128,6 @@
         <div class="hero-actions reveal">
           <a href="#products" class="btn btn-primary">Shop Now</a>
           <a href="#why" class="btn btn-outline">Learn More</a>
-        </div>
-      </div>
-      <div class="hero-visual reveal">
-        <div class="hero-vial-display">
-          <div class="glow-ring"></div>
-          <div class="vial-3d">
-            <div class="vial-cap"></div>
-            <div class="vial-neck"></div>
-            <div class="vial-body">
-              <div class="vial-label">
-                <svg viewBox="0 0 36 36" fill="none"><defs><linearGradient id="vialGrad" x1="0" y1="0" x2="0" y2="36"><stop offset="0%" stop-color="rgba(0,212,255,0.6)"/><stop offset="100%" stop-color="rgba(0,82,204,0.6)"/></linearGradient></defs><line x1="4" y1="2" x2="4" y2="34" stroke="url(#vialGrad)" stroke-width="1.5"/><polyline points="8,5 30,5 30,31 8,31" stroke="url(#vialGrad)" stroke-width="1.5" fill="none" stroke-linejoin="miter"/><text x="11" y="24" font-family="Georgia" font-size="14" font-weight="bold" fill="url(#vialGrad)">V</text></svg>
-                <span>Valerian<br>Peptide</span>
-              </div>
-              <div class="vial-liquid"></div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

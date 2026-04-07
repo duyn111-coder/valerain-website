@@ -23,4 +23,16 @@ for (const file of files) {
   }
 }
 
+const dirs = ['videos'];
+for (const dir of dirs) {
+  const srcDir = path.join(__dirname, dir);
+  if (fs.existsSync(srcDir)) {
+    const destDir = path.join(dist, dir);
+    fs.mkdirSync(destDir, { recursive: true });
+    for (const file of fs.readdirSync(srcDir)) {
+      fs.copyFileSync(path.join(srcDir, file), path.join(destDir, file));
+    }
+  }
+}
+
 console.log('Build complete — files copied to dist/');
